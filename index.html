@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html ng-app="googleApp">
+
+<head>
+  <title>NoServerProject</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src='http://code.jquery.com/jquery-1.10.2.js' type='text/javascript'></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQozrug54dF7eQEjfMaCeIkgjQXo6fLMw">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-maps/2.1.0-X.10/angular-google-maps.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mainControl.js"></script>
+  <script src="js/mainService.js"></script>
+  <script src="map/mapControl.js"></script>
+</head>
+
+<body>
+  <header>
+  </header>
+  <div class="container">
+    <div class="leftContainer" ng-controller="mainControl">
+      <div class="search">
+        <input class="input" ng-model="findLocation" placeholder="Search Location">
+        <button class="btn btn-primary" ng-click="goSearch()">Search Location</button>
+        <button class="btn btn-success" ng-click="goSearch()">Favorite Location</button>
+      </div>
+      <!-- ^^ end of search>-->
+    </div>
+    <!-- ^^end of leftContainer>-->
+    <div class='mapCanvas' ng-controller="mapControl">
+      <ng-view></ng-view>
+      <ui-gmap-google-map center="{latitude: 30, longitude: -100}" zoom="12">
+        <ui-gmap-marker idKey="" coords="setMarkerPosition">
+        </ui-gmap-marker>
+      </ui-gmap-google-map>
+    </div>
+    <div class="rightContainer" ng-controller="mainControl">
+      <div class="search">
+        <input class="inputFriends" ng-model="findFriend" placeholder="Search Friends">
+        <button class="btn btn-primary" ng-click="">Search friends</button>
+        <h1> Friends!!</h1>
+        <div class="friendscroll">
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i></h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+          <div class='friendContainer'>
+            <img src="pictures/weddingTuxido.jpg">
+            <h4>Jacob Robertson</h4>
+            <h5><i>Bountiful, Utah</i>
+            </h5>
+          </div>
+          <!--^^ end of freindContainer -->
+        </div>
+        <!--^^ end of FreindScroll
+      </div>
+      <!-- ^^ end of search>-->
+      </div>
+      <!-- ^^end of rightContainer>-->
+    </div>
+    <!-- ^^end of container>-->
+</body>
+
+</html>
